@@ -39,6 +39,8 @@ interface AddHabitModalProps {
   } | null;
   habitMuscleCount: number;
   lifeGoalsCount: number;
+  habitMuscleCount: number;
+  lifeGoalsCount: number;
 }
 
 // Constants for localStorage
@@ -497,14 +499,14 @@ const AddHabitModal: React.FC<AddHabitModalProps> = ({ isOpen, onClose, onSaveHa
                 }
                 
                 return (
-                <label key={type.value} className={`flex items-start space-x-3 cursor-pointer ${paddingClass} rounded-lg transition-colors ${backgroundClasses}`}>
+                <label key={type.value} className={`flex items-center space-x-3 cursor-pointer ${paddingClass} rounded-lg transition-colors ${backgroundClasses}`}>
                   <input
                     type="radio"
                     name="habitType"
                     value={type.value}
                     checked={habitType === type.value}
                     onChange={(e) => setHabitType(e.target.value)}
-                    className="mt-1 w-4 h-4 text-green-500 bg-[#1C1C1E] border-gray-600 focus:ring-green-500 flex-shrink-0"
+                    className="w-4 h-4 text-green-500 bg-[#1C1C1E] border-gray-600 focus:ring-green-500 flex-shrink-0"
                   />
                   <div>
                     <div className="text-white font-medium">{type.label}</div>

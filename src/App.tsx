@@ -472,7 +472,7 @@ const HabitRow: React.FC<{
     
     return (
         <div 
-            className={`${showCircles ? "mt-5" : "mt-3"} ${isDragging ? 'opacity-50' : ''} transition-opacity cursor-move p-4 rounded-lg ${getHabitRowStyling()}`}
+            className={`mt-3 ${isDragging ? 'opacity-50' : ''} transition-opacity cursor-move p-3 rounded-lg ${getHabitRowStyling()}`}
             draggable
             onDragStart={(e) => onDragStart(e, habit.id)}
             onDragOver={onDragOver}
